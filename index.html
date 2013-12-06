@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CubbyHole</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="nav nav-pills pull-right">
+                        <li><a href="" id='linkInscription'> S'inscrire</a></li>
+                        <li><a href="" id='linkConnexion'>Se connecter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <center>
+                        <h1 class="ch"><span class="glyphicon glyphicon-cloud"></span> Cubby<span class="h">Hole</span></h1>
+                    </center>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="formConnexion">
+                        <form class="form-signin">
+                            <h2 class="form-signin-heading">Se connecter</h2>
+                            <input type="text" class="form-control" placeholder="Adresse Email" required autofocus>
+                            <input type="password" class="form-control" placeholder="Mot de passe" required>
+                            <button class="btn btn-lg btn-success btn-block" type="submit">Se connecter</button>
+                        </form>
+                    </div>
+                    <div id="formInscription" style="display:none;">
+                        <form class="form-signin">
+                            <h2 class="form-signin-heading">S'incrire</h2>
+                            <input type="text" class="form-control" placeholder="Prénom" required autofocus>
+                            <input type="text" class="form-control droit" placeholder="Nom" required>
+                            <input type="text" class="form-control droit" placeholder="Adresse Email" required>
+                            <input type="password" class="form-control" placeholder="Mot de passe" required>
+                            <button class="btn btn-lg btn-success btn-block" type="submit">S'inscrire</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/jquery.js"></script> 
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/form-sign-in.js"></script>
+    </body>
+</html>
