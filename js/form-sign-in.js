@@ -2,9 +2,9 @@ $(document).ready(function() {
 
     /* Clique sur le lien S'inscire */
     $("a#linkInscription").on("click", function(event) {
-        if ($("#formInscription").is(':hidden')) {
-            $("#formConnexion").fadeOut("fast", function() {
-                $("#formInscription").slideToggle("fast");
+        if ($("#divInscription").is(':hidden')) {
+            $("#divConnexion").fadeOut("fast", function() {
+                $("#divInscription").slideToggle("fast");
             });
         }
         event.preventDefault();
@@ -12,11 +12,17 @@ $(document).ready(function() {
 
     /* Clique sur le lien Se connecter */
     $("a#linkConnexion").on("click", function(event) {
-        if ($("#formConnexion").is(':hidden')) {
-            $("#formInscription").fadeOut("fast", function() {
-                $("#formConnexion").slideToggle("fast");
+        if ($("#divConnexion").is(':hidden')) {
+            $("#divInscription").fadeOut("fast", function() {
+                $("#divConnexion").slideToggle("fast");
             });
         }
+        event.preventDefault();
+    });
+    
+    /* Vérification avant l'envoi du formulaire */
+    $("#formInscription").on("submit", function(event){
+        //Vérification
         event.preventDefault();
     });
 

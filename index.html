@@ -26,20 +26,20 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <div id="formConnexion">
-                        <form class="form-signin">
+                    <div id="divConnexion">
+                        <form class="form-signin connexion" id="formConnexion" method="post">
                             <h2 class="form-signin-heading">Se connecter</h2>
-                            <input type="text" class="form-control" placeholder="Adresse Email" required autofocus>
-                            <input type="password" class="form-control" placeholder="Mot de passe" required>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Adresse Email" required autofocus>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Mot de passe" required>
                             <button class="btn btn-lg btn-success btn-block" type="submit">Se connecter</button>
                         </form>
                     </div>
-                    <div id="formInscription" style="display:none;">
-                        <form class="form-signin">
+                    <div id="divInscription" style="display:none;">
+                        <form class="form-signin inscription" id="formInscription" method="post">
                             <h2 class="form-signin-heading">S'incrire</h2>
                             <input type="text" class="form-control" placeholder="Prénom" required autofocus>
-                            <input type="text" class="form-control droit" placeholder="Nom" required>
-                            <input type="text" class="form-control droit" placeholder="Adresse Email" required>
+                            <input type="text" class="form-control remove-radius" placeholder="Nom" required>
+                            <input type="email" class="form-control remove-radius" placeholder="Adresse Email" required>
                             <input type="password" class="form-control" placeholder="Mot de passe" required>
                             <button class="btn btn-lg btn-success btn-block" type="submit">S'inscrire</button>
                         </form>
