@@ -9,9 +9,9 @@ and open the template in the editor.
 */
 
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  //background-image: url("../img/arches.png");
+    padding-top: 20px;
+    padding-bottom: 20px;
+    //background-image: url("../img/arches.png");
 }
 
 @font-face {
@@ -99,4 +99,7 @@ h2.form-signin-heading{
     border-radius: 3px;
 }
 
+.bg-cloud {
+    background-image: url("../img/arches.png");
+}
 /** *****/
