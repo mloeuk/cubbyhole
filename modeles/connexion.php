@@ -1,7 +1,6 @@
 <?php
 
 if (isset($_POST['email'], $_POST['motdepasse'])) { # Si le formulaire est soumis
-    echo "YOUYOU"; exit();
     if (filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL)) {
         $email = filter_input(INPUT_POST, "email");
         $mdp = crypt(filter_input(INPUT_POST, "motdepasse"));

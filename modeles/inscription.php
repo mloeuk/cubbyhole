@@ -1,7 +1,6 @@
 <?php
 
 if (isset($_POST['addprenom'], $_POST['addnom'], $_POST['addemail'], $_POST['addmotdepasse'])) {
-
     if (filter_input(INPUT_POST, 'addemail', FILTER_VALIDATE_EMAIL)) {
         $prenom = filter_input(INPUT_POST, "addprenom");
         $nom = filter_input(INPUT_POST, "addnom");
