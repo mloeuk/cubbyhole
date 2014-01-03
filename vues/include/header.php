@@ -11,8 +11,8 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Accueil</a></li>
-                <li><a href="#about">Compte</a></li>
+                <li class="active"><a href="index.php?page=accueil">Accueil</a></li>
+                <li><a href="index.php?page=compte">Compte</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">

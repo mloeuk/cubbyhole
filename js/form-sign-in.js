@@ -19,11 +19,5 @@ $(document).ready(function() {
         }
         event.preventDefault();
     });
-    
-    /* Vérification avant l'envoi du formulaire */
-    $("#formInscription").on("submit", function(event){
-        //Vérification
-        event.preventDefault();
-    });
 
 });
