@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col-md-12">
             <div id="divConnexion">
-                <form class="form-signin connexion" id="formConnexion" method="post" action="">
+                <form class="form-signin connexion" id="formConnexion" method="post" action="./modeles/connexion.php">
                     <h2 class="form-signin-heading">Se connecter</h2>
                     <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Adresse Email" required autofocus>
                     <input type="password" class="form-control" name="motdepasse" id="inputPassword" placeholder="Mot de passe" required>
@@ -25,7 +25,7 @@
                 </form>
             </div>
             <div id="divInscription" style="display:none;">
-                <form class="form-signin inscription" id="formInscription" method="post" action="">
+                <form class="form-signin inscription" id="formInscription" method="post" action="./modeles/inscription.php">
                     <h2 class="form-signin-heading">S'incrire</h2>
                     <input type="text" class="form-control" name="addprenom" placeholder="Prénom" required autofocus>
                     <input type="text" class="form-control remove-radius" name="addnom" placeholder="Nom" required>
@@ -34,6 +34,10 @@
                     <button class="btn btn-lg btn-success btn-block" type="submit">S'inscrire</button>
                 </form>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4" id="error-sign-in">    
         </div>
     </div>
 </div>

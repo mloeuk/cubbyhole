@@ -1,6 +1,10 @@
 <?php
 
-if (isset($_POST['email'], $_POST['motdepasse'])) { # Si le formulaire est soumis
+if (isset($_POST['email'], $_POST['motdepasse'])) {
+    $rep = "tessssssssssssssssst";
+    
+    echo json_encode(array("reponse" => 0, "erreur" => $rep));
+    exit();
     if (filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL)) {
         $email = filter_input(INPUT_POST, "email");
         $mdp = crypt(filter_input(INPUT_POST, "motdepasse"));
@@ -17,9 +21,11 @@ if (isset($_POST['email'], $_POST['motdepasse'])) { # Si le formulaire est soumi
             header('Location: ./index.php');
             exit();
         } else {
-            echo "Identifiant ou Mot de passe incorrect.";
+            $rep = "Identifiant ou Mot de passe incorrect.";
         }
     } else {
-        echo "E-mail invalide";
+        $rep = "E-mail invalide";
     }
+    echo json_encode(array("reponse" => 0, "erreur" => $rep));
+    exit();
 }

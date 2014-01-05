@@ -20,4 +20,42 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
+    $("#formConnexion").on("submit", function(event) {
+        $.ajax({
+            url: $(this).attr('action'),
+            type: $(this).attr('method'),
+            data: $(this).serialize(),
+            dataType: 'json',
+            async: false,
+            success: function(json) {
+                if (json.reponse === 0) {
+                    $("#error-sign-in").html("<div class=\"alert alert-danger\">" + json.erreur + "</div>");
+                }
+            },
+            error: function(xhr, status, error) {
+                alert(xhr.responseText);
+            }
+        });
+        event.preventDefault();
+    });
+    
+    $("#formInscription").on("submit", function(event) {
+        $.ajax({
+            url: $(this).attr('action'),
+            type: $(this).attr('method'),
+            data: $(this).serialize(),
+            dataType: 'json',
+            async: false,
+            success: function(json) {
+                if (json.reponse === 0) {
+                    alert('Tout est bon');
+                }
+            },
+            error: function(xhr, status, error) {
+                alert(xhr.responseText);
+            }
+        });
+        event.preventDefault();
+    });
+
 });
