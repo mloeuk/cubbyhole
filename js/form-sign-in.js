@@ -5,6 +5,9 @@ $(document).ready(function() {
         if ($("#divInscription").is(':hidden')) {
             $("#divConnexion").fadeOut("fast", function() {
                 $("#divInscription").slideToggle("fast");
+                if ($("#error-sign-in-ins").is(':visible')) {
+                    $("#error-sign-in-ins").hide().empty();
+                }
             });
         }
         event.preventDefault();
@@ -15,11 +18,15 @@ $(document).ready(function() {
         if ($("#divConnexion").is(':hidden')) {
             $("#divInscription").fadeOut("fast", function() {
                 $("#divConnexion").slideToggle("fast");
+                if ($("#error-sign-in-cnx").is(':visible')) {
+                    $("#error-sign-in-cnx").hide().empty();
+                }
             });
         }
         event.preventDefault();
     });
-
+    
+    /* Envoie du formulaire de connexion */
     $("#formConnexion").on("submit", function(event) {
         $.ajax({
             url: $(this).attr('action'),
@@ -29,7 +36,7 @@ $(document).ready(function() {
             async: false,
             success: function(json) {
                 if (json.reponse === 0) {
-                    $("#error-sign-in").html("<div class=\"alert alert-danger\">" + json.erreur + "</div>");
+                    $("#error-sign-in-cnx").text(json.erreur).fadeIn();
                 }
             },
             error: function(xhr, status, error) {
@@ -38,7 +45,8 @@ $(document).ready(function() {
         });
         event.preventDefault();
     });
-    
+
+    /* Envoie du formulaire d'inscription */
     $("#formInscription").on("submit", function(event) {
         $.ajax({
             url: $(this).attr('action'),
@@ -48,7 +56,7 @@ $(document).ready(function() {
             async: false,
             success: function(json) {
                 if (json.reponse === 0) {
-                    alert('Tout est bon');
+                    $("#error-sign-in-ins").text(json.erreur).fadeIn();
                 }
             },
             error: function(xhr, status, error) {

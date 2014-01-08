@@ -22,6 +22,8 @@
                     <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Adresse Email" required autofocus>
                     <input type="password" class="form-control" name="motdepasse" id="inputPassword" placeholder="Mot de passe" required>
                     <button class="btn btn-lg btn-success btn-block" type="submit">Se connecter</button>
+                    <br/>
+                    <div class="alert alert-danger text-center" style="display:none;" id="error-sign-in-cnx"></div>
                 </form>
             </div>
             <div id="divInscription" style="display:none;">
@@ -32,12 +34,10 @@
                     <input type="email" class="form-control remove-radius" name="addemail" placeholder="Adresse Email" required>
                     <input type="password" class="form-control" name="addmotdepasse" placeholder="Mot de passe" required>
                     <button class="btn btn-lg btn-success btn-block" type="submit">S'inscrire</button>
+                    <br/>
+                    <div class="alert alert-danger text-center" style="display:none;" id="error-sign-in-ins"></div>
                 </form>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4 col-md-offset-4" id="error-sign-in">    
         </div>
     </div>
 </div>
