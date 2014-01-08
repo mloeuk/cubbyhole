@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST['email'], $_POST['motdepasse'])) {
-    $rep = "tessssssssssssssssst";
+    $rep = "Champ invalide !fe zfzefzzef zefzefzzefz ze zefze fze fzez fzef ze fz";
     
     echo json_encode(array("reponse" => 0, "erreur" => $rep));
     exit();

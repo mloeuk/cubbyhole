@@ -3,8 +3,10 @@ $(document).ready(function() {
     /* Clique sur le lien S'inscire */
     $("a#linkInscription").on("click", function(event) {
         if ($("#divInscription").is(':hidden')) {
-            $("#divConnexion").fadeOut("fast", function() {
-                $("#divInscription").slideToggle("fast");
+            $("#divConnexion").fadeOut("fast", function() { //Cache le formulaire connexion
+                $("#divInscription").slideToggle("fast", function() {   //Affiche le formulaire inscription
+                    $(this).find("input").first().focus();  //Focus sur le premier champ du formulaire
+                });
                 if ($("#error-sign-in-ins").is(':visible')) {
                     $("#error-sign-in-ins").hide().empty();
                 }
@@ -17,7 +19,9 @@ $(document).ready(function() {
     $("a#linkConnexion").on("click", function(event) {
         if ($("#divConnexion").is(':hidden')) {
             $("#divInscription").fadeOut("fast", function() {
-                $("#divConnexion").slideToggle("fast");
+                $("#divConnexion").slideToggle("fast", function() {
+                    $(this).find("input").first().focus();
+                });
                 if ($("#error-sign-in-cnx").is(':visible')) {
                     $("#error-sign-in-cnx").hide().empty();
                 }
@@ -25,7 +29,7 @@ $(document).ready(function() {
         }
         event.preventDefault();
     });
-    
+
     /* Envoie du formulaire de connexion */
     $("#formConnexion").on("submit", function(event) {
         $.ajax({
