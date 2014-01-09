@@ -39,8 +39,10 @@ $(document).ready(function() {
             dataType: 'json',
             async: false,
             success: function(json) {
-                if (json.reponse === 0) {
-                    $("#error-sign-in-cnx").text(json.erreur).fadeIn();
+                if (json.connexion === false) {
+                    $("#error-sign-in-cnx").text(json.reponse).fadeIn();
+                } else if(json.connexion === true) {
+                    document.location.href = json.reponse;
                 }
             },
             error: function(xhr, status, error) {
@@ -59,8 +61,10 @@ $(document).ready(function() {
             dataType: 'json',
             async: false,
             success: function(json) {
-                if (json.reponse === 0) {
-                    $("#error-sign-in-ins").text(json.erreur).fadeIn();
+                if (json.inscription === false) {
+                    $("#error-sign-in-ins").text(json.reponse).fadeIn();
+                } else if(json.inscription === true) {
+                    document.location.href = json.reponse;
                 }
             },
             error: function(xhr, status, error) {

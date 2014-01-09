@@ -1,31 +1,34 @@
 <?php
 
+require_once(dirname(__FILE__).'/pdo_mysql.php');
+
 if (isset($_POST['email'], $_POST['motdepasse'])) {
-    $rep = "Champ invalide !fe zfzefzzef zefzefzzefz ze zefze fze fzez fzef ze fz";
-    
-    echo json_encode(array("reponse" => 0, "erreur" => $rep));
-    exit();
     if (filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL)) {
+        $rep = "";
         $email = filter_input(INPUT_POST, "email");
         $mdp = crypt(filter_input(INPUT_POST, "motdepasse"));
 
-        $return = $db->prepare('SELECT password, prenom, nom, iduser FROM user WHERE email = :email');
-        $return->bindValue(':email', $email, PDO::PARAM_STR);
-        $data = $return->execute();
+        $return = $db->prepare('"SELECT * FROM user WHERE email = :email AND motdepasse = :mdp');
+        $return->execute(array('email' => $email, 'mdp' => $mdp));
+        print_r($return); exit();
+        if($return->fetchColumn() > 0)
+        {
+            $user = $return->fetch(PDO::FETCH_OBJ);
+            
+            $_SESSION['iduser'] = $user->iduser;
+            $_SESSION['nom'] = $user->nom;
+            $_SESSION['prenom'] = $user->prenom;
 
-        if ($data['password'] === $mdp) {
-            $_SESSION['iduser'] = $data['iduser'];
-            $_SESSION['nom'] = $data['nom'];
-            $_SESSION['prenom'] = $data['prenom'];
-
-            header('Location: ./index.php');
-            exit();
+            $cnx = true;
+            $rep = "index.php?page=mycubby";
         } else {
+            $cnx = false;
             $rep = "Identifiant ou Mot de passe incorrect.";
         }
     } else {
-        $rep = "E-mail invalide";
+        $cnx = false;
+        $rep = "Adresse mail non valide.";
     }
-    echo json_encode(array("reponse" => 0, "erreur" => $rep));
+    echo json_encode(array("connexion" => $cnx, "reponse" => $rep));
     exit();
 }

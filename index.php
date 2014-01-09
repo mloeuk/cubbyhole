@@ -1,6 +1,5 @@
 <?php
 session_start();
-//include_once './modeles/pdo_mysql.php';
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +27,7 @@ session_start();
         ?>
         <script src="./js/jquery.js"></script> 
         <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/myfunction.js"></script>
         <script src="./js/form-sign-in.js"></script>
     </body>
 </html>

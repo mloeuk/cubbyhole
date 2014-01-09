@@ -1,13 +1,15 @@
 <?php
 
+require_once(dirname(__FILE__).'/pdo_mysql.php');
+
 if (isset($_POST['addprenom'], $_POST['addnom'], $_POST['addemail'], $_POST['addmotdepasse'])) {
     if (filter_input(INPUT_POST, 'addemail', FILTER_VALIDATE_EMAIL)) {
         $prenom = filter_input(INPUT_POST, "addprenom");
         $nom = filter_input(INPUT_POST, "addnom");
         $email = filter_input(INPUT_POST, "addemail");
-        $mdp = filter_input(INPUT_POST, "addmotdepasse");
+        $mdp = crypt(filter_input(INPUT_POST, "addmotdepasse"));
 
-        $stmt = $db->prepare("INSERT INTO user(prenom, nom, email, password) VALUES(:prenom, :prenom, :email, :password)");
+        $stmt = $db->prepare("INSERT INTO user(prenom, nom, email, motdepasse) VALUES(:prenom, :prenom, :email, :password)");
         if (!$stmt) {
             print_r($db->errorInfo());
         } else {
@@ -15,8 +17,14 @@ if (isset($_POST['addprenom'], $_POST['addnom'], $_POST['addemail'], $_POST['add
             if (!$insert) {
                 print_r($stmt->errorInfo());
             } else {
-                header("location: ...");
+                $inscription = true;
+                $rep = "index.php";
             }
         }
+    } else {
+        $inscription = false;
+        $rep = "Adresse mail non valide.";
     }
+    echo json_encode(array("inscription" => $inscription, "reponse" => $rep));
+    exit();
 }
