@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/font-awesome.min.css" rel="stylesheet">
         <link href="./css/main.css" rel="stylesheet">
     </head>
     <body>
@@ -17,17 +18,19 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+                    <a class="navbar-brand cubby" href="#"><i class="fa fa-cloud"></i></a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Accueil</a></li>
-                        <li><a href="#about">Compte</a></li>
+                        <li><a href="#about">Stockage</a></li>
+                        <li><a href="#about">Partage</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Loeuk Mony <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Something else here</a></li>
+                                <li><a href="#">Compte</a></li>
                                 <li class="divider"></li>
                                 <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</a></li>
                             </ul>
@@ -40,17 +43,23 @@
         <div class="container">
             <div class="col-md-12">
                 <div class="page-header">
-                    <h1 class="ch"><span class="glyphicon glyphicon-cloud"></span> Cubby<span class="h">Hole</span> <small><span class="glyphicon glyphicon-hand-right"></span> /SupInfo/Agile</small></h1>
+                    <h1 class="ch"><!--<span class="glyphicon glyphicon-cloud"></span> -->Cubby<span class="h">Hole</span> <small><span class="glyphicon glyphicon-hand-right"></span> /SupInfo/Agile</small></h1>
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3">
+                <div class="col-md-4">
                     <div class="btn-group btn-group-justified">
                         <a href="" class="btn btn-default blue" role="button"><span class="glyphicon glyphicon-cloud-upload"></span> Transférer</a>
                         <a href="" class="btn btn-default blue" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Nouveau dossier</a>
                         <!--<a href="" class="btn btn-default blue" role="button"><span class="glyphicon glyphicon-folder-close"></span> Nouveau chose</a>-->
+                    </div>
+                </div>
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        <input type="text" class="form-control" placeholder="Rechercher">
                     </div>
                 </div>
             </div>
@@ -62,38 +71,45 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th style="width:60%">Nom</th>
+                                <th style="width:5%"></th>
+                                <th style="width:55%">Nom</th>
                                 <th style="width:20%">Type</th>
                                 <th style="width:20%">Modifié</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>CoursAgile.doc</td>
-                                <td>Word</td>
+                                <td><i class="fa fa-folder folder-color"></i></td>
+                                <td>CoursAgile</td>
+                                <td>Dossier</td>
                                 <td>12/12/2013</td>
                             </tr>
                             <tr>
+                                <td><i class="fa fa-folder folder-color"></i></td>
                                 <td>CougregersAgile.doc</td>
                                 <td>Word</td>
                                 <td>12/12/2013</td>
                             </tr>
                             <tr>
+                                <td><i class="fa fa-folder folder-color"></i></td>
                                 <td>pdfCouzergqregergrsAgile.doc</td>
                                 <td>pdf</td>
                                 <td>12/12/2013</td>
                             </tr>
                             <tr>
+                                <td><i class="fa fa-folder folder-color"></i></td>
                                 <td>CourgresAgile.doc</td>
                                 <td>Word</td>
                                 <td>12/12/2013</td>
                             </tr>
                             <tr>
+                                <td><i class="fa fa-folder folder-color"></i></td>
                                 <td>CourgqegegregrsAgile.doc</td>
                                 <td>Word</td>
                                 <td>12/12/2013</td>
                             </tr>
                             <tr>
+                                <td><i class="fa fa-folder folder-color"></i></td>
                                 <td>Cogile.doc</td>
                                 <td>pdf</td>
                                 <td>12/12/2013</td>

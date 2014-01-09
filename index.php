@@ -10,6 +10,7 @@ session_start();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/font-awesome.min.css" rel="stylesheet">
         <link href="./css/main.css" rel="stylesheet">
     </head>
     <body>

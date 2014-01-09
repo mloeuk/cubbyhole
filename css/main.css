@@ -34,8 +34,16 @@ h1.ch {
     font-size: 45px;
 }
 
+.c {
+    color: #34495E;
+}
+
 .h {
     color: #27AE61;
+}
+
+.navbar-default .navbar-brand.cubby {
+    color: #34495E;
 }
 
 /** Formulaire Identification *****/
@@ -101,5 +109,13 @@ h2.form-signin-heading{
 
 .bg-cloud {
     background-image: url("../img/arches.png");
+}
+
+.folder-color {
+    color: #D9C471;
+}
+
+.input-group-addon {
+    color: #27AE61;
 }
 /** *****/
