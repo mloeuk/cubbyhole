@@ -11,20 +11,21 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Accueil</a></li>
-                <li><a href="#about">Stockage</a></li>
-                <li><a href="#about">Partage</a></li>
+                <li <?php if($_GET['page'] === "mycubby"){echo "class='active'";} ?>><a href="./index.php?page=mycubby">Casier</a></li>
+                <li <?php if($_GET['page'] === "stockage"){echo "class='active'";} ?>><a href="./index.php?page=stockage">Stockage</a></li>
+                <li <?php if($_GET['page'] === "partage"){echo "class='active'";} ?>><a href="./index.php?page=partage">Partage</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Loeuk Mony <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['nom'] . " " . $_SESSION['prenom'] ?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Compte</a></li>
+                        <li><a href="./index.php?page=compte">Compte</a></li>
                         <li class="divider"></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</a></li>
+                        <li><a href="./modeles/deconnexion.php"><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
 </div>
+<br />

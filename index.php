@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once(dirname(__FILE__) . '/modeles/pdo_mysql.php');
 ?>
 
 <!DOCTYPE html>
@@ -14,14 +15,16 @@ session_start();
     </head>
     <body>
         <?php
-        if (array_key_exists('iduser', $_SESSION) && !empty($_SESSION['id'])) { //Si l'utilisateur est connecté
+        if (array_key_exists('iduser', $_SESSION) && !empty($_SESSION['iduser'])) { //Si l'utilisateur est connecté
             include './vues/include/header.php';
-            if (!empty($_GET['page']) && is_file($_GET['page'] . '.php')) { //Si la page existe
-                include $_GET['page'] . '.php';
-            } else {
-                include './controleurs/accueil.php';
+            if (!empty($_GET['page']) && is_file("./controleurs/" . $_GET['page'] . '.php')) { //Si la page existe
+                include "./controleurs/" . $_GET['page'] . '.php';
+            } elseif(!empty($_GET['page']) && !is_file("./controleurs/" . $_GET['page'] . '.php')) { //Si la page n'existe pas
+                include './vues/error404.php';
+            } elseif(empty($_GET['page'])) { //Si $_GET['page'] vide alors mycubby.php (Par défault)
+                include './controleurs/mycubby.php';
             }
-        } else {
+        } else { //Si l'utilisateur n'est pas connecté
             include './controleurs/sign-in.php';
         }
         ?>

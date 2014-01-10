@@ -46,7 +46,7 @@ $(document).ready(function() {
                 }
             },
             error: function(xhr, status, error) {
-                alert(xhr.responseText);
+                $("#error-sign-in-cnx").html(xhr.responseText).fadeIn();
             }
         });
         event.preventDefault();

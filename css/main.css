@@ -118,4 +118,10 @@ h2.form-signin-heading{
 .input-group-addon {
     color: #27AE61;
 }
+
+.arches {
+    background-image: url("../img/arches.png");
+    -webkit-box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.05);
+    box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.05);
+}
 /** *****/
