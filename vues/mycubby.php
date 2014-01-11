@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-4">
             <ul class="nav nav-pills">
-                <li><a href="#"><i class="fa fa-cloud-upload fa-lg"></i> Trasnférer</a></li>
+                <li><a href="#"><i class="fa fa-cloud-upload fa-lg"></i> Transférer</a></li>
                 <li><a href="#"><i class="fa fa-plus-circle fa-lg"></i> Nouveau dossier</a></li>
             </ul>
         </div>
@@ -20,9 +20,7 @@
             </div>
         </div>
     </div>
-</div>
-<div class="container">
-    <div class="row">
+    <div class="row row-cubby-table">
         <div class="col-md-12">
             <table class="table table-striped">
                 <thead>
