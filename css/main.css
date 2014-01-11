@@ -116,12 +116,20 @@ h2.form-signin-heading{
 }
 
 .input-group-addon {
-    color: #27AE61;
+    color: #34495E;
 }
 
 .arches {
     background-image: url("../img/arches.png");
     -webkit-box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.05);
     box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.05);
+}
+
+.nav.nav-pills > li > a {
+    color: #34495E;
+}
+
+.nav.nav-pills > li > a:hover, .nav.nav-pills > li > a:focus {
+    color: #27AE61;
 }
 /** *****/
