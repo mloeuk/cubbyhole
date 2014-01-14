@@ -26,20 +26,25 @@
                 <thead>
                     <tr>
                         <th style="width:5%"></th>
-                        <th style="width:55%">Nom</th>
+                        <th style="width:45%">Nom</th>
                         <th style="width:20%">Type</th>
+                        <th style="width:10%">Taille</th>
                         <th style="width:20%">Modifié</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
+                    //var_dump($list);
                     if (count($list) > 0) {
                         foreach ($list as $l) {
-                            if (is_dir($l)) {
-                                echo "<tr><td colspan='4'>" . $l . "</td></tr>";
-                            } else {
-                                echo "<tr><td colspan='4'>" . $l . "</td></tr>";
-                            }
+                            echo "<tr>";
+                            ($l["type"] == "folder") ? $icon = "<i class='fa fa-folder folder-color'></i>" : $icon = "<i class='fa fa-file'></i>";
+                            echo "<td>".$icon."</td>";
+                            echo "<td>".$l["filename"]."</td>";
+                            echo "<td>".$l["type"]."</td>";
+                            echo "<td>".$l["size"]."</td>";
+                            echo "<td>".$l["last_update"]."</td>";
+                            echo "</tr>";
                         }
                     } else {
                         echo "<tr><td colspan='4'>Ce dossier est vide.</td></tr>";
