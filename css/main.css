@@ -140,4 +140,9 @@ h2.form-signin-heading{
 .row-cubby-table {
     margin-top: 10px;
 }
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: #27AE61;
+    color: #FFF;
+}
 /** *****/
