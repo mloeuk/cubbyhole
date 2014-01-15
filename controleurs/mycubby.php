@@ -1,8 +1,9 @@
 <?php
+$iduser = $_SESSION['iduser'];
 
 include(dirname(__FILE__).'/../modeles/mycubby.php');
 
-$path = getPath();
+$path = getPathUser();
 
 $list = getInfoListContentsOfDirectory();
 

@@ -18,6 +18,14 @@ if (isset($_POST['addprenom'], $_POST['addnom'], $_POST['addemail'], $_POST['add
             if (!$insert) {
                 print_r($stmt->errorInfo());
             } else {
+                $id = $db->lastInsertId();
+                
+                $structure = $_SERVER["DOCUMENT_ROOT"].'/cubbyhole/users/'.$id;
+
+                if (!mkdir($structure, 0777, true)) {
+                    die('Echec lors de la création des répertoires...');
+                }
+
                 $inscription = true;
                 $rep = "index.php";
             }

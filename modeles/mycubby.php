@@ -1,13 +1,18 @@
 <?php
 
-function getPath() {
-    //return $_SERVER["DOCUMENT_ROOT"] . "cubbyhole/users/" . $_SESSION["id_user"];
-    return dirname(__FILE__);
+function getPathUser() {
+    global $iduser;
+    return $_SERVER["DOCUMENT_ROOT"] . "/cubbyhole/users/" . $iduser;
+    //return dirname(__FILE__);
+}
+
+function getPathForUser() {
+    
 }
 
 //Retourne le contenu du dossier
 function getListContentsOfDirectory() {
-    $path_directory = getPath();
+    $path_directory = getPathUser();
 
     $list = array_diff(scandir($path_directory), array('..', '.')); //Liste le contenu du dossier et ne liste pas '..', '.'
 
@@ -38,7 +43,7 @@ function getFilesize($file, $digits = 2) {
 
 //Retourne toutes les informations des fichiers
 function getInfoListContentsOfDirectory() {
-    $path_directory = getPath();
+    $path_directory = getPathUser();
     $info_list = array();
 
     if (is_dir($path_directory)) {

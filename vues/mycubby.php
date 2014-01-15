@@ -47,7 +47,7 @@
                             echo "</tr>";
                         }
                     } else {
-                        echo "<tr><td colspan='4'>Ce dossier est vide.</td></tr>";
+                        echo "<tr><td colspan='5' class='text-center'><i class='fa fa-folder-open-o fa-5x'></i><br />Ce dossier est vide.</td></tr>";
                     }
                     ?>
                 </tbody>
