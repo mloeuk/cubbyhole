@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    
+    /*
+     * event.stopPropagation();
+     * Stop la propagation du "click sur la page"
+     */
 
 //click button nouveau dossier
     $("a#newFolder").on("click", function(event) {
@@ -27,19 +32,33 @@ $(document).ready(function() {
                 if (!$(this).val().length) {
                     $(this).closest("tr").remove();
                 } else {
-
+                    alert("Il faut créer le dossier");
                 }
             });
         }
         event.preventDefault();
+        event.stopPropagation();
+    });
+    
+    $("a#rename").on("click", function(event) {
+        event.preventDefault();
+        event.stopPropagation();
     });
 
-    $("tbody#listContents > tr").on("click", function() {
+    $("tbody#listContents > tr").on("click", function(event) {
         if (!$(this).hasClass("folder-empty")) {
             $("tbody#listContents > tr").removeClass("tr-onclick");
             $(this).addClass("tr-onclick");
             $("#ul-default").hide();
             $("#ul-selected").show();
+            event.stopPropagation();
         }
+    });
+    
+    //Click sur la page
+    $('html').click(function() {
+        $("tbody#listContents > tr").removeClass("tr-onclick");
+        $("#ul-default").show();
+        $("#ul-selected").hide();
     });
 });
