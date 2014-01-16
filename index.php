@@ -32,6 +32,7 @@ require_once(dirname(__FILE__) . '/modeles/pdo_mysql.php');
         <script src="./js/bootstrap.min.js"></script>
         <script src="./js/myfunction.js"></script>
         <script src="./js/form-sign-in.js"></script>
+        <script src="./js/mycubby.js"></script>
     </body>
 </html>
 

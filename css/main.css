@@ -145,4 +145,26 @@ h2.form-signin-heading{
     background-color: #27AE61;
     color: #FFF;
 }
+
+tr.folder-empty > td {
+    text-align: center;
+    color: #DDD;
+}
+
+tr.tr-onclick > td {
+    background-color: #34495E;
+    color: #FFF;
+}
+
+.red {
+    color: #E84C3D;
+}
+
+.green {
+    color: #27AE61;
+}
+
+.blue {
+    color: #297FB8;
+}
 /** *****/

@@ -10,6 +10,7 @@ if (isset($_POST['addprenom'], $_POST['addnom'], $_POST['addemail'], $_POST['add
         $email = filter_input(INPUT_POST, "addemail");
         $mdp = sha1(filter_input(INPUT_POST, "addmotdepasse"));
 
+        //Mettre champ email unique
         $stmt = $db->prepare("INSERT INTO user(prenom, nom, email, motdepasse) VALUES(:prenom, :prenom, :email, :password)");
         if (!$stmt) {
             print_r($db->errorInfo());
@@ -20,6 +21,7 @@ if (isset($_POST['addprenom'], $_POST['addnom'], $_POST['addemail'], $_POST['add
             } else {
                 $id = $db->lastInsertId();
                 
+                //Créer du dossier de l'utilisateur
                 $structure = $_SERVER["DOCUMENT_ROOT"].'/cubbyhole/users/'.$id;
 
                 if (!mkdir($structure, 0777, true)) {
