@@ -2,10 +2,10 @@ $(document).ready(function() {
     
     /*
      * event.stopPropagation();
-     * Stop la propagation du "click sur la page"
+     * Stop la propagation du "Click sur la page"
      */
 
-//click button nouveau dossier
+    //click button nouveau dossier
     $("a#newFolder").on("click", function(event) {
         var trNewFolder = "<tr>";
         trNewFolder += "<td><i class='fa fa-folder folder-color'></i></td>";
@@ -40,11 +40,13 @@ $(document).ready(function() {
         event.stopPropagation();
     });
     
+    //Click renommer dossier
     $("a#rename").on("click", function(event) {
         event.preventDefault();
         event.stopPropagation();
     });
 
+    //Click ligne du tableau
     $("tbody#listContents > tr").on("click", function(event) {
         if (!$(this).hasClass("folder-empty")) {
             $("tbody#listContents > tr").removeClass("tr-onclick");
