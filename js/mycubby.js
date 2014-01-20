@@ -1,11 +1,11 @@
 $(document).ready(function() {
-    
+
     /*
      * event.stopPropagation();
      * Stop la propagation du "click sur la page"
-     */
+     */ 
 
-//click button nouveau dossier
+    //click button nouveau dossier
     $("a#newFolder").on("click", function(event) {
         var trNewFolder = "<tr>";
         trNewFolder += "<td><i class='fa fa-folder folder-color'></i></td>";
@@ -39,8 +39,9 @@ $(document).ready(function() {
         event.preventDefault();
         event.stopPropagation();
     });
-    
+
     $("a#rename").on("click", function(event) {
+        alert("coucou");
         event.preventDefault();
         event.stopPropagation();
     });
@@ -54,7 +55,7 @@ $(document).ready(function() {
             event.stopPropagation();
         }
     });
-    
+
     //Click sur la page
     $('html').click(function() {
         $("tbody#listContents > tr").removeClass("tr-onclick");
