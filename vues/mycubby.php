@@ -9,14 +9,14 @@
     <div class="row">
         <div class="col-md-8">
             <ul class="nav nav-pills" id="ul-default">
-                <li><a href=""><i class="fa fa-cloud-upload fa-lg"></i> Transférer</a></li>
-                <li><a href="" id="newFolder"><i class="fa fa-plus-circle fa-lg"></i> Nouveau dossier</a></li>
+                <li><a href="#" id="upload"><i class="fa fa-cloud-upload fa-lg"></i> Transférer</a></li>
+                <li><a href="#" id="newFolder"><i class="fa fa-plus-circle fa-lg"></i> Nouveau dossier</a></li>
             </ul>
             <ul class="nav nav-pills" id="ul-selected" style="display:none;">
-                <li><a href="" id="share"><i class="fa fa-users fa-lg blue"></i> Partager</a></li>
-                <li><a href="" id="download"><i class="fa fa-cloud-download fa-lg green"></i> Télécharger</a></li>
-                <li><a href="" id="delete"><i class="fa fa-times fa-lg red" style></i> Supprimer</a></li>
-                <li><a href="" id="rename"><i class="fa fa-pencil fa-lg"></i> Renommer</a></li>
+                <li><a href="#" id="share"><i class="fa fa-users fa-lg blue"></i> Partager</a></li>
+                <li><a href="#" id="download"><i class="fa fa-cloud-download fa-lg green"></i> Télécharger</a></li>
+                <li><a href="#" id="delete"><i class="fa fa-times fa-lg red" style></i> Supprimer</a></li>
+                <li><a href="#" id="rename"><i class="fa fa-pencil fa-lg"></i> Renommer</a></li>
             </ul>
         </div>
         <div class="col-md-4">

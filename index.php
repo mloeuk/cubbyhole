@@ -35,5 +35,3 @@ require_once(dirname(__FILE__) . '/modeles/pdo_mysql.php');
         <script src="./js/mycubby.js"></script>
     </body>
 </html>
-
-
