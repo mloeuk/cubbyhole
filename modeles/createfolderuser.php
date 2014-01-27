@@ -9,4 +9,5 @@ if (isset($_POST['path'])) {
         echo json_encode(array("mkdir" => true));
     }
 }
+
 ?>

@@ -6,7 +6,7 @@ $(document).ready(function() {
      */
     
     //click button nouveau dossier
-    $("a#newFolder").on("click", function(event) {
+    $("a#link-newFolder").on("click", function(event) {
         var trNewFolder = "<tr>";
         trNewFolder += "<td><i class='fa fa-folder folder-color'></i></td>";
         trNewFolder += "<td><input type=\"text\" id='nameNewFolder' class=\"form-control input-sm\" placeholder=\"Nom du dossier\"></td>";
@@ -41,7 +41,7 @@ $(document).ready(function() {
     });
     
     //Click renommer dossier
-    $("a#rename").on("click", function(event) {
+    $("a#link-rename").on("click", function(event) {
         alert("coucou");
         event.preventDefault();
         event.stopPropagation();
