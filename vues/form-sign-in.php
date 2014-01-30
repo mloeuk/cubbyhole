@@ -4,6 +4,7 @@
             <ul class="nav nav-pills pull-right">
                 <li><a href="" id='linkInscription'> S'inscrire</a></li>
                 <li><a href="" id='linkConnexion'>Se connecter</a></li>
+                <li><a href="" id='linkDownload'><i class="fa fa-download"></i> Télécharger</a></li>
             </ul>
         </div>
     </div>
