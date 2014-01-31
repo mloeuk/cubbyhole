@@ -138,7 +138,7 @@ h2.form-signin-heading{
 }
 
 .row-cubby-table {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
@@ -167,4 +167,11 @@ tr.tr-onclick > td {
 .blue {
     color: #297FB8;
 }
-/** *****/
+
+.row-heigth {
+    height: 100%;
+ }
+
+ #home-plus {
+    background-color: #34495E;
+ }

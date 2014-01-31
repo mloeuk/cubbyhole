@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+    var height = $(window).height();
+    $("#home-form").css("height", height);
+    $("#home-plus").css("height", height);
+
     /* Clique sur le lien S'inscire */
     $("a#linkInscription").on("click", function(event) {
         if ($("#divInscription").is(':hidden')) {
