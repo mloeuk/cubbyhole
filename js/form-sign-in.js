@@ -4,18 +4,20 @@ $(document).ready(function() {
     $("#home-form").css("height", height);
     $("#home-plus").css("height", height);
 
+    $('a[href=#home-plus]').click(function(event){
+        $('html, body').animate({scrollTop:$('#home-plus').offset().top}, 1200);
+        event.preventDefault();
+    });
+
     /* Clique sur le lien S'inscire */
     $("a#linkInscription").on("click", function(event) {
-        if ($("#divInscription").is(':hidden')) {
-            $("#divConnexion").fadeOut("fast", function() { //Cache le formulaire connexion
-                $("#divInscription").slideToggle("fast", function() {   //Affiche le formulaire inscription
-                    $(this).find("input").first().focus();  //Focus sur le premier champ du formulaire
-                });
-                if ($("#error-sign-in-ins").is(':visible')) {
-                    $("#error-sign-in-ins").hide().empty();
-                }
-            });
-        }
+        showFormInscription();
+        event.preventDefault();
+    });
+
+    $("a#btn-inscription-plus").on("click", function(event) {
+        showFormInscription();
+        $('html, body').animate({scrollTop:0}, 1200);
         event.preventDefault();
     });
 
@@ -77,5 +79,18 @@ $(document).ready(function() {
         });
         event.preventDefault();
     });
+
+    function showFormInscription(){
+        if ($("#divInscription").is(':hidden')) {
+            $("#divConnexion").fadeOut("fast", function() { //Cache le formulaire connexion
+                $("#divInscription").slideToggle("fast", function() {   //Affiche le formulaire inscription
+                    $(this).find("input").first().focus();  //Focus sur le premier champ du formulaire
+                });
+                if ($("#error-sign-in-ins").is(':visible')) {
+                    $("#error-sign-in-ins").hide().empty();
+                }
+            });
+        }
+    }
 
 });

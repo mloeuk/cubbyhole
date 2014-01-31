@@ -172,6 +172,20 @@ tr.tr-onclick > td {
     height: 100%;
  }
 
+ .bloc {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+ }
+
  #home-plus {
     background-color: #34495E;
+    color: #FFF;
+    display: table;
+    width: 100%;
+ }
+
+ #home-form {    
+    display: table;
+    width: 100%;
  }
