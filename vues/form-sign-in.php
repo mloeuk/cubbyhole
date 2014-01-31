@@ -44,6 +44,12 @@
 </div>
 <div class="navbar navbar-default navbar-fixed-bottom bg-cloud">
     <div class="container">
-        <p class="navbar-text">Création du site web par l'équipe - Projet de SupInfo</p>
+        <p class="navbar-text pull-left">CubbyHole - Projet de SupInfo</p>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="">En Savoir plus</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
     </div>
 </div>
