@@ -167,4 +167,11 @@ tr.tr-onclick > td {
 .blue {
     color: #297FB8;
 }
-/** *****/
+
+.row-heigth {
+    height: 100%;
+ }
+
+ #home-plus {
+    background-color: #34495E;
+ }
