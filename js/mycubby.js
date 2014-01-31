@@ -2,13 +2,8 @@ $(document).ready(function() {
 
     /*
      * event.stopPropagation();
-<<<<<<< HEAD
-     * Stop la propagation du "click sur la page"
-     */ 
-=======
      * Stop la propagation du "Click sur la page"
      */
->>>>>>> 07fb800f9acb44c907083cc1dfa4fecc7628a036
 
     //click button nouveau dossier
     $("a#newFolder").on("click", function(event) {
@@ -44,12 +39,8 @@ $(document).ready(function() {
         event.preventDefault();
         event.stopPropagation();
     });
-<<<<<<< HEAD
-
-=======
     
     //Click renommer dossier
->>>>>>> 07fb800f9acb44c907083cc1dfa4fecc7628a036
     $("a#rename").on("click", function(event) {
         alert("coucou");
         event.preventDefault();
