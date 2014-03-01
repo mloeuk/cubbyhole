@@ -43,14 +43,14 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+<!--         <div class="row">
             <div class="col-md-12 text-center">
                 <a href="#home-plus">En savoir plus</a>
             </div>
-        </div>
+        </div> -->
     </div>
 </section>
-<section id="home-plus">
+<!-- <section id="home-plus">
     <div class="bloc">
         <div class="container">
             <div class="row">
@@ -77,7 +77,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <div class="navbar navbar-default navbar-fixed-bottom bg-cloud">
     <div class="container">
         <p class="navbar-text pull-left">CubbyHole - Projet de SupInfo</p>

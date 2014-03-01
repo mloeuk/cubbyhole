@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-    var height = $(window).height();
-    $("#home-form").css("height", height);
-    $("#home-plus").css("height", height);
+    // var height = $(window).height();
+    // $("#home-form").css("height", height);
+    // $("#home-plus").css("height", height);
 
     $('a[href=#home-plus]').click(function(event){
         $('html, body').animate({scrollTop:$('#home-plus').offset().top}, 1200);
@@ -15,11 +15,11 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
-    $("a#btn-inscription-plus").on("click", function(event) {
-        showFormInscription();
-        $('html, body').animate({scrollTop:0}, 1200);
-        event.preventDefault();
-    });
+    // $("a#btn-inscription-plus").on("click", function(event) {
+    //     showFormInscription();
+    //     $('html, body').animate({scrollTop:0}, 1200);
+    //     event.preventDefault();
+    // });
 
     /* Clique sur le lien Se connecter */
     $("a#linkConnexion").on("click", function(event) {
